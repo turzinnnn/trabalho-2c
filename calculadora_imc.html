@@ -6,21 +6,56 @@
     <title>Calculadora de IMC</title>
     <link rel="stylesheet" href="calculadora_imc.css">
 </head>
-<body>
-    <h1>Calculadora de IMC</h1>
-    <h2>Cadastre-se abaixo para fazer seu cálculo!</h2><br>
-    <form>
-        <label for="nome">Primeiro nome:</label><br>
-        <input class="tamanho" type="text" id="nome" name="nome"><br>
-        <label for="Sobrenome">Sobrenome</label><br>
-        <input class="tamanho" type="text" id="Sobrenome" name="Sobrenome"><br>
-        <label for="Data">Data de nascimento</label><br>
-        <input class="tamanho" type="text" id="data" name="data"><br>
-        <label for="email">Email:</label><br>
-        <input class="tamanho" type="text" id="email" name="email"><br>
-        <label for="senha">Senha:</label><br>
-        <input class="tamanho" type="text" id="senha" name="senha">
-        <input type="submit" value="Enviar">
-    </form>
+<body>  
+    <nav class="navbar navbar-expand-sm bg-light">
+
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 3</a>
+            </li>
+          </ul>
+        </div>
+      
+      </nav>
+      
+
+
+    <h1>CALCULADORA DE IMC</h1><br>
+        <h2 id="h">Cadastre-se abaixo para fazer seu cálculo!</h2><br>
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <label style="color: white; font-size: 170%;" for ="nome completo">Nome completo:</label>
+                            <input class="tamanho" type="text" id="nome" name="nome"><br>
+                            <label style="color: white; font-size: 170%;" for="email">Email:</label>
+                            <input class="tamanho" type="text" id="email" name="email" ><br>
+                            <label style="color: white; font-size: 170%;" for="senha">Senha:</label>
+                            <input class="tamanho" type="text" id="senha" name="senha" >
+                        </td>
+                    <tr>
+                </table>
+                <div>
+                    <input type="submit" id="botão" value="enviar" onclick="verificação()">
+                </div>
+            </form>
+        <script>
+            function verificação(){
+                var verificar1 = value(nome);
+                var verificar2 = value(email);
+                var verificar3 = value(senha);
+                if (verificar1 || verificar2 || verificar3 == value(""))
+                window.alert("alguma informação faltando!")
+            }
+        </script>
+
+            
 </body>
 </html>
